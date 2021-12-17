@@ -46,13 +46,3 @@ sam = pd.ExcelFile('ch08_data/data/sam_kospi.xlsx')
 kospi = soon.parse('sam_kospi')
 print(kospi.info())
 # 3. 칼럼추출
-import matplotlib.pyplot as plt
-from matplotlib import font_manager, rc
-font_path = 'C:/Windows/Fonts/malgun.TTF'
-font = font_manager.FontProperties(fname=font_path).get_name()
-rc('font', family = font)
-
-price = [305, 450, 320, 460, 330, 480, 380, 520]
-year = ['2018 1분기', '2019 1분기','2018 2분기', '2019 2분기','2018 3분기', '2019 3분기','2018 4분기', '2019 4분기']
-plt.title('2018년도 vs 2019년도 매출현황 비교')
-plt.bar(year, price, width=0.7,  color = 'skyblue') # .bar 세로형 막대
